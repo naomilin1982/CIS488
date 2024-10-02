@@ -1,4 +1,26 @@
 /* @license GNU-GPL-2.0-or-later https://www.drupal.org/licensing/faq */
+
+.target {
+    padding: 20px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+body.utm-example1 .target {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+body.utm-example2 .target {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+body.utm-default .target {
+    background-color: lightgray;
+    color: black;
+}
+
 @-webkit-keyframes bounce {
     from, 20%, 53%, 80%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);

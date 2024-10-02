@@ -6,17 +6,17 @@
     transition: background-color 0.3s;
 }
 
-body.utm-example1 .target {
+body.utm_content1 .target {
     background-color: lightblue;
     color: darkblue;
 }
 
-body.utm-example2 .target {
+body.utm_content2 .target {
     background-color: lightgreen;
     color: darkgreen;
 }
 
-body.utm-default .target {
+body.utm_default .target {
     background-color: lightgray;
     color: black;
 }

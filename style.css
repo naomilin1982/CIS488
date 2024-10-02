@@ -1,35 +1,4 @@
 /* @license GNU-GPL-2.0-or-later https://www.drupal.org/licensing/faq */
-
-// Function to get URL parameters
-function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
-
-// Get the value of the utm_content parameter
-var utmContent = getUrlParameter('utm_content');
-
-// Function to swap content based on utm_content
-function swapContentBasedOnUtmContent() {
-    if (utmContent) {
-        // Example: Change paragraph text based on utm_content value
-        var paragraphs = document.querySelectorAll('.dynamic-content'); // Assuming paragraphs have this class
-        paragraphs.forEach(function(paragraph) {
-            if (utmContent === 'value1') {
-                paragraph.textContent = 'This is the content for value1.';
-            } else if (utmContent === 'value2') {
-                paragraph.textContent = 'This is the content for value2.';
-            } else {
-                paragraph.textContent = 'Default content if no match is found.';
-            }
-        });
-    }
-}
-
-// Call the function to swap content
-swapContentBasedOnUtmContent();
 @-webkit-keyframes bounce {
     from, 20%, 53%, 80%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
